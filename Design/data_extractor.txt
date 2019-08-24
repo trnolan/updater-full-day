@@ -1,0 +1,14 @@
+Data Extractor
+
+Publishes Flask API with an Endpoint for each of the three integrations(file_watcher, S3, remote_api)
+Called with the location of data to extract and user_id
+Uses simplejson/csv libs to read data
+Update SQLlite DB with new rows
+
+def ftp_post/user_id/file_path
+
+def s3_post/user_id/file_path
+
+def remote_api_post/user_id/api_call
+
+def update_db_meth

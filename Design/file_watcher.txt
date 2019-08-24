@@ -1,0 +1,22 @@
+On every call get list of sub-dirs
+Iterate through each client sub-dir (Extract out user_id from file_dir)
+If files in sub-dir call data_extractor API using requests with file location.
+On receipt of proper return (i.e. 200 response) move file into archive directory structure outside of base location
+If no proper return, do nothing ( will get it on next call)
+
+def run_method()
+for client_sub_dir in base_dir:
+	if client_sub_dir not Empty:
+		for file in client_sub_dir:
+			process(file)
+
+
+def process()
+try:
+	requests.post(user_id, file_location)
+	if response == 200:
+		move_file_archive()
+
+def move_file_archive()
+make_client_archive_dir if not exists
+move_file to client_archive
